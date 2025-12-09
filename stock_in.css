@@ -1,0 +1,1253 @@
+/* ------------------------------
+   Reset & Main Container - COMPRESSED
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    padding: 10px;
+    line-height: 1.4;
+    font-size: 12px;
+}
+
+.main-container {
+    background: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ------------------------------
+   Single Row Header Section - ULTRA COMPRESSED
+------------------------------ */
+.header-section {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Single Row: Document No + Date + Supplier Details */
+.first-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.document-info {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    flex: 0 0 auto;
+}
+
+.doc-number-group {
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.doc-number-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 10px;
+}
+
+.doc-input-container {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.doc-number-input {
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 10px;
+    background: #f8f9fa;
+    color: #6c757d;
+    width: 180px;
+    transition: all 0.2s ease;
+}
+
+.doc-number-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    background: #fff;
+}
+
+.doc-number-input.editable {
+    background: #fff;
+    color: #2c3e50;
+    border-color: #3498db;
+}
+
+.edit-doc-btn, .search-doc-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+    min-width: 40px;
+}
+
+.edit-doc-btn:hover, .search-doc-btn:hover {
+    background: #2980b9;
+}
+
+.search-doc-btn {
+    background: #27ae60;
+}
+
+.search-doc-btn:hover {
+    background: #219653;
+}
+
+.doc-date-group {
+    flex: 0 0 auto;
+    text-align: left;
+    min-width: 80px;
+}
+
+.doc-date-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 10px;
+}
+
+.date-value {
+    color: #34495e;
+    font-weight: 500;
+    font-size: 10px;
+    background: #f8f9fa;
+    padding: 4px 6px;
+    border-radius: 2px;
+    display: inline-block;
+    min-width: 70px;
+}
+
+.doc-info-group {
+    flex: 0 0 auto;
+    text-align: left;
+    min-width: 60px;
+}
+
+.doc-info-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 10px;
+}
+
+.info-value {
+    color: #34495e;
+    font-weight: 500;
+    font-size: 10px;
+    background: #e8f4fd;
+    padding: 4px 6px;
+    border-radius: 2px;
+    display: inline-block;
+    min-width: 30px;
+    text-align: center;
+    border: 1px solid #3498db;
+}
+
+.doc-action-group {
+    flex: 0 0 auto;
+    text-align: center;
+    min-width: 60px;
+}
+
+.new-doc-btn {
+    background: #27ae60;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.2s ease;
+    border: 1px solid #27ae60;
+    cursor: pointer;
+}
+
+.new-doc-btn:hover {
+    background: #219653;
+    border-color: #219653;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.new-doc-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Supplier Details in Same Row - ULTRA COMPRESSED */
+.second-line {
+    margin-bottom: 0;
+}
+
+.supplier-details {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.supplier-details h3 {
+    color: #2c3e50;
+    font-size: 10px;
+    margin-bottom: 3px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #3498db;
+}
+
+.supplier-fields {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.supplier-fields .form-group {
+    flex: 1;
+}
+
+.supplier-fields .form-group:first-child {
+    flex: 2; /* Wider for supplier dropdown */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 600;
+    color: #555;
+    font-size: 9px;
+}
+
+.form-select, .form-input {
+    width: 100%;
+    padding: 4px 5px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 10px;
+    background: #fff;
+}
+
+.form-select:focus, .form-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 1px rgba(52, 152, 219, 0.1);
+}
+
+.address-field, .phone-field {
+    background: #f8f9fa;
+    color: #495057;
+    font-size: 9px;
+}
+
+.doc-subtitle {
+    color: #7f8c8d;
+    font-size: 8px;
+    font-style: italic;
+    margin: 4px 0 0 0;
+    line-height: 1.1;
+    text-align: center;
+}
+
+/* Make header section relative for subtitle positioning */
+.header-section {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* ------------------------------
+   Divider - COMPRESSED
+------------------------------ */
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ddd, transparent);
+    margin: 10px 0;
+}
+
+/* ------------------------------
+   Item Entry Section - COMPRESSED
+------------------------------ */
+.item-entry-section {
+    margin-bottom: 15px;
+}
+
+.item-entry-section h2 {
+    color: #2c3e50;
+    font-size: 12px;
+    margin-bottom: 8px;
+    padding-left: 6px;
+    border-left: 2px solid #e74c3c;
+}
+
+.item-form-row {
+    margin-bottom: 8px;
+}
+
+.full-width {
+    flex: 100%;
+}
+
+.item-dropdown {
+    font-size: 11px;
+}
+
+/* COMPRESSED: Item details row with tighter spacing */
+.item-details-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+/* COMPRESSED: Optimized flex ratios for Excel-like layout */
+.item-details-row .form-group:nth-child(1) { /* Item Name */
+    flex: 4; /* Even wider for item names */
+    min-width: 250px;
+}
+
+.item-details-row .form-group:nth-child(2) { /* Quantity */
+    flex: 0.8; /* Smaller for quantity */
+    min-width: 60px;
+    max-width: 80px;
+}
+
+.item-details-row .form-group:nth-child(3) { /* Price */
+    flex: 1.2;
+    min-width: 80px;
+}
+
+.item-details-row .form-group:nth-child(4) { /* Total */
+    flex: 1.2;
+    min-width: 90px;
+}
+
+.item-details-row .form-group:nth-child(5) { /* Add Item Button */
+    flex: 0.8;
+    min-width: 70px;
+}
+
+.add-item-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 10px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.add-item-btn:hover {
+    background: #219653;
+}
+
+/* ------------------------------
+   Items Table Section - EXCEL-LIKE COMPRESSED
+------------------------------ */
+.items-table-section {
+    margin-top: 15px;
+}
+
+.items-table-section h2 {
+    color: #2c3e50;
+    font-size: 12px;
+    margin-bottom: 6px;
+    padding-left: 6px;
+    border-left: 2px solid #f39c12;
+}
+
+.table-container {
+    border: 1px solid #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    /* EXCEL-LIKE: Show more rows with minimal height */
+    max-height: 300px; /* Height for 8-10 rows */
+    overflow-y: auto;
+    position: relative;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    font-size: 11px;
+}
+
+/* EXCEL-LIKE: Optimized column widths for maximum data display */
+.items-table th:nth-child(1), /* Item Code */
+.items-table td:nth-child(1) {
+    width: 2%;
+    min-width: 40px;
+}
+
+.items-table th:nth-child(2), /* Item Name */
+.items-table td:nth-child(2) {
+    width: 4%; Maximum width for item names
+    min-width: 60px;
+}
+
+.items-table th:nth-child(3), /* Quantity */
+.items-table td:nth-child(3) {
+    width: 12%; /* Minimal for quantity */
+    min-width: 200px;
+}
+
+.items-table th:nth-child(4), /* Price */
+.items-table td:nth-child(4) {
+    width: 12%;
+    min-width: 70px;
+}
+
+.items-table th:nth-child(5), /* Total */
+.items-table td:nth-child(5) {
+    width: 12%;
+    min-width: 70px;
+}
+
+.items-table th:nth-child(6), /* Edit Action */
+.items-table td:nth-child(6) {
+    width: 6%; /* Minimal width for edit button */
+    min-width: 50px;
+    text-align: center;
+}
+
+.items-table th {
+    background: #34495e;
+    color: white;
+    padding: 6px 8px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-right: 1px solid #2c3e50;
+}
+
+.items-table th:last-child {
+    text-align: center;
+    border-right: none;
+}
+
+.items-table td {
+    padding: 4px 8px;
+    border-bottom: 1px solid #e9ecef;
+    border-right: 1px solid #f1f1f1;
+    text-align: left;
+    font-size: 10px;
+    height: 28px; /* Compressed row height for Excel-like feel */
+    vertical-align: middle;
+}
+
+.items-table td:last-child {
+    text-align: center;
+    padding: 2px 4px;
+    border-right: none;
+}
+
+.items-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.items-table tr:hover {
+    background: #e3f2fd;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Action Buttons - COMPRESSED */
+.edit-item-btn, .delete-item-btn {
+    border: none;
+    padding: 2px 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 10px;
+    transition: all 0.2s ease;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.edit-item-btn {
+    background: #f39c12;
+    color: white;
+}
+
+.edit-item-btn:hover {
+    background: #e67e22;
+    transform: translateY(-1px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.delete-item-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.delete-item-btn:hover {
+    background: #c0392b;
+    transform: translateY(-1px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* ------------------------------
+   Grand Total & Actions - COMPRESSED
+------------------------------ */
+.grand-total-section {
+    text-align: left;
+    margin-bottom: 10px;
+    padding-top: 6px;
+    border-top: 1px solid #e9ecef;
+}
+
+.grand-total {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* COMPRESSED: Action buttons with minimal spacing */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.action-form {
+    display: flex;
+    gap: 8px;
+}
+
+.save-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 10px;
+    transition: background 0.2s ease;
+}
+
+.save-btn:hover {
+    background: #2980b9;
+}
+
+.clear-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 10px;
+    transition: background 0.2s ease;
+}
+
+.clear-btn:hover {
+    background: #c0392b;
+}
+
+/* ------------------------------
+   Modal Styles - ENHANCED
+------------------------------ */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 500px; /* Increased width for better item dropdown */
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.modal h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    flex: 1;
+}
+
+/* Enhanced Modal Form Styles */
+.modal-content .form-group {
+    margin-bottom: 15px;
+}
+
+.modal-content .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+    font-size: 12px;
+}
+
+.modal-content .form-select,
+.modal-content .form-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    background: #fff;
+}
+
+.modal-content .form-select:focus,
+.modal-content .form-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.modal-content .item-dropdown {
+    font-size: 13px;
+}
+
+/* ------------------------------
+   Notification Styles
+------------------------------ */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000;
+    min-width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    animation: slideIn 0.3s ease;
+}
+
+.notification.error {
+    background: #e74c3c;
+}
+
+.notification.warning {
+    background: #f39c12;
+}
+
+.notification.info {
+    background: #3498db;
+}
+
+.notification-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-close:hover {
+    opacity: 0.8;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+/* ------------------------------
+   Excel-like Additional Features
+------------------------------ */
+.edit-mode-badge {
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Excel-like grid lines */
+.items-table {
+    border: 1px solid #d0d0d0;
+}
+
+.items-table th,
+.items-table td {
+    border-right: 1px solid #d0d0d0;
+}
+
+.items-table th:last-child,
+.items-table td:last-child {
+    border-right: none;
+}
+
+/* Excel-like selection highlight */
+.items-table tr:hover {
+    background: #cce7ff !important;
+}
+
+/* Compact form styling */
+.compact-modal {
+    width: 450px;
+    padding: 15px;
+}
+
+.compact-select {
+    font-size: 10px;
+    padding: 4px 6px;
+}
+
+.compact-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.compact-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.compact-input {
+    font-size: 10px;
+    padding: 4px 6px;
+}
+
+.compact-buttons {
+    gap: 6px;
+}
+
+.compact-btn {
+    padding: 5px 12px;
+    font-size: 10px;
+}
+
+.total-display {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+/* ------------------------------
+   Responsive Design - COMPRESSED
+------------------------------ */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+    
+    .main-container {
+        padding: 10px;
+    }
+    
+    .header-section {
+        padding: 6px;
+    }
+    
+    .first-line {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .document-info {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .supplier-details {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+    
+    .doc-input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .doc-number-input {
+        min-width: 100%;
+        width: 100%;
+    }
+    
+    .supplier-fields {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    /* Mobile responsive for item details */
+    .item-details-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .item-details-row .form-group {
+        width: 100%;
+        min-width: auto;
+        max-width: none;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .action-form {
+        flex-direction: column;
+        width: 100%;
+        gap: 6px;
+    }
+    
+    .save-btn, .clear-btn {
+        width: 100%;
+        text-align: center;
+        padding: 8px 15px;
+        font-size: 11px;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+        max-height: 250px;
+    }
+    
+    /* Mobile table adjustments */
+    .items-table {
+        min-width: 600px;
+    }
+    
+    .items-table th,
+    .items-table td {
+        padding: 4px 6px;
+        font-size: 9px;
+    }
+    
+    .items-table td {
+        height: 24px;
+    }
+    
+    .edit-item-btn {
+        width: 35px;
+        padding: 2px 4px;
+        font-size: 8px;
+    }
+    
+    /* Modal responsive */
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 12px;
+    }
+    
+    .compact-modal {
+        width: 95%;
+    }
+    
+    /* Notification responsive */
+    .notification {
+        min-width: 200px;
+        max-width: 280px;
+        margin: 5px;
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+}
+
+/* ------------------------------
+   Custom Scrollbar - UPDATED
+------------------------------ */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+    border: 2px solid #f1f1f1;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Firefox scrollbar */
+.table-container {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* ------------------------------
+   Empty State Styling
+------------------------------ */
+.items-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Ensure the table has proper spacing when empty */
+.items-table:empty {
+    display: none;
+}
+
+/* ------------------------------
+   Additional Utility Styles
+------------------------------ */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Success states */
+.success {
+    border-color: #27ae60 !important;
+}
+
+/* Error states */
+.error {
+    border-color: #e74c3c !important;
+}
+/* -----
+-------------------------
+   Excel-like Enhancements
+------------------------------ */
+
+/* Zebra striping like Excel */
+.items-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+.items-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Excel-like header styling */
+.items-table th {
+    background: linear-gradient(to bottom, #4a5568 0%, #2d3748 100%);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    border-bottom: 2px solid #2d3748;
+}
+
+/* Excel-like cell focus */
+.items-table td:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: -2px;
+    background: #ebf8ff;
+}
+
+/* Compact number formatting */
+.items-table .text-right {
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+}
+
+/* Excel-like grid */
+.items-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #cbd5e0;
+}
+
+.items-table th,
+.items-table td {
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.items-table th:last-child,
+.items-table td:last-child {
+    border-right: none;
+}
+
+.items-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Improved scrollbar for Excel feel */
+.table-container::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 6px;
+    border: 2px solid #f7fafc;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+.table-container::-webkit-scrollbar-corner {
+    background: #f7fafc;
+}
+
+/* Excel-like selection */
+.items-table tr.selected {
+    background: #bee3f8 !important;
+}
+
+.items-table tr.selected td {
+    background: inherit;
+}
+
+/* Compact form elements to match Excel style */
+.form-select option {
+    padding: 2px 4px;
+    font-size: 11px;
+}
+
+/* Status indicators */
+.edit-mode-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Excel-like totals row styling */
+.grand-total {
+    border: 1px solid #27ae60;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------
+   Searchable Dropdown Styles
+------------------------------ */
+.searchable-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.item-search {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fff;
+    cursor: text;
+}
+
+.item-search:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dropdown-list.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-item.selected {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.dropdown-item.highlighted {
+    background-color: #e1f5fe;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+/* Compact version for modal */
+.compact-input.item-search {
+    padding: 6px 8px;
+    font-size: 12px;
+}
+
+.searchable-dropdown .dropdown-list {
+    font-size: 12px;
+}
+
+.searchable-dropdown .dropdown-item {
+    padding: 8px 10px;
+}
+
+/* No results message */
+.dropdown-no-results {
+    padding: 10px 12px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Loading state */
+.dropdown-loading {
+    padding: 10px 12px;
+    color: #666;
+    text-align: center;
+}
+
+/* Search highlight */
+.search-highlight {
+    background-color: #fff3cd;
+    font-weight: bold;
+}
+
+/* Mobile responsive for searchable dropdown */
+@media (max-width: 768px) {
+    .dropdown-list {
+        max-height: 150px;
+        font-size: 12px;
+    }
+    
+    .dropdown-item {
+        padding: 8px 10px;
+    }
+    
+    .item-search {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 8px 10px;
+    }
+}
+
+/* Improved button styling */
+.add-item-btn, .save-btn, .clear-btn {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.add-item-btn:active, .save-btn:active, .clear-btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}

@@ -1,0 +1,353 @@
+/* ----------------------------
+   General Form Container
+---------------------------- */
+.form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 550px;
+  margin-bottom: 20px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ----------------------------
+   Buttons
+---------------------------- */
+.form-container button[name="create"],
+.form-container button[name="update"] {
+  background: #0e9ad6;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-container button[name="create"]:hover,
+.form-container button[name="update"]:hover {
+  filter: brightness(0.95);
+}
+
+button[id^="view"] {
+  background: #27ae60;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button[id^="view"]:hover {
+  filter: brightness(0.95);
+}
+
+/* ----------------------------
+   Table Container
+---------------------------- */
+#itemsTableContainer {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+#itemsTableContainer h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #0f6a92;
+  font-weight: 600;
+}
+
+/* ----------------------------
+   Table Styling
+---------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th, td {
+  border: 1px solid #e1e4e8;
+  padding: 12px 15px;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+th {
+  background: #0f6a92;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background: #f7f9fa;
+}
+
+tr:hover {
+  background: #e1f0fb;
+}
+
+/* Edit button in table */
+.edit-btn {
+  background: #27ae60;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: #0c572b;
+  filter: brightness(0.9);
+}
+
+/* Delete button in table */
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin-left: 5px;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+  filter: brightness(0.9);
+}
+
+/* Cancel button */
+.cancel-btn {
+  background: #95a5a6;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 10px;
+}
+
+.cancel-btn:hover {
+  background: #7f8c8d;
+  filter: brightness(0.95);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .form-container {
+    max-width: 100%;
+  }
+  table {
+    font-size: 13px;
+  }
+}
+
+/* ----------------------------
+   Compact Layout & Form Styles
+---------------------------- */
+.compact-form-grid,
+.compact-item-grid,
+.supplier-section,
+.edit-search-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.compact-form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.compact-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.compact-input,
+.compact-select,
+.compact-textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.compact-input:focus,
+.compact-select:focus,
+.compact-textarea:focus {
+  border-color: #0e9ad6;
+  outline: none;
+}
+
+/* Supplier Section */
+.supplier-section {
+  margin-top: 10px;
+}
+
+.supplier-info-block {
+  background: #f7f9fa;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #e1e4e8;
+  color: #444;
+  font-size: 14px;
+}
+
+/* Buttons */
+.compact-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-compact-primary {
+  background: #0e9ad6;
+  color: #fff;
+}
+
+.btn-compact-primary:hover {
+  filter: brightness(0.9);
+}
+
+.btn-compact-secondary {
+  background: #27ae60;
+  color: #fff;
+}
+
+.btn-compact-secondary:hover {
+  filter: brightness(0.9);
+}
+
+/* Item Entry Section */
+.compact-item-section {
+  margin-top: 20px;
+  background: #fdfdfd;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.compact-item-grid {
+  margin-bottom: 10px;
+}
+
+/* Table Styling for Compact Mode */
+.compact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.compact-table th,
+.compact-table td {
+  border: 1px solid #e1e4e8;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.compact-table th {
+  background: #0f6a92;
+  color: #fff;
+}
+
+.compact-table tr:nth-child(even) {
+  background: #f7f9fa;
+}
+
+.compact-table tr:hover {
+  background: #e1f0fb;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.remove-btn:hover {
+  background: #c0392b;
+}
+
+/* Total Section */
+.compact-total-section {
+  margin-top: 10px;
+  text-align: right;
+  font-weight: 700;
+  color: #0f6a92;
+  font-size: 15px;
+}
+
+/* Suggestion Dropdown */
+.compact-suggestions {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: calc(100% - 2px);
+  z-index: 10;
+  max-height: 180px;
+  overflow-y: auto;
+  display: none;
+}
+
+.compact-suggestion-item {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.compact-suggestion-item:hover {
+  background: #f1faff;
+}
+
+
+

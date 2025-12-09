@@ -1,0 +1,67 @@
+/* Custom Header Styles */
+.header-with-topbar .navbar {
+    transition: all 0.3s ease;
+}
+
+.header-with-topbar .navbar-brand img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.header-with-topbar .navbar-toggler {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.header-with-topbar .toggler-icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-with-topbar .toggler-icon span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px 0;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+.header-with-topbar .toggler-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header-with-topbar .toggler-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.header-with-topbar .toggler-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.header-with-topbar .navbar-collapse {
+    /* background-color:rgb(142, 190, 187); */
+    border-radius: 0 0 12px 12px;
+    padding: 10px 0;
+}
+
+.header-with-topbar .navbar-nav {
+    width: 100%;
+}
+
+.header-with-topbar .nav-item .nav-link {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.header-with-topbar .nav-item .nav-link:hover {
+    color: red;
+}
